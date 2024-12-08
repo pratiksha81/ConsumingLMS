@@ -1,0 +1,25 @@
+﻿@model ConsumingLMS.Models.Authentication.SignUpViewModel
+<form asp-action="SignUp" method="post">
+    <div>
+        <label for="Username">Username:</label>
+        <input type="text" asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div>
+        <label for="Password">Password:</label>
+        <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label for="Role">Role:</label>
+        <input type="text" asp-for="Role" />
+        <span asp-validation-for="Role"></span>
+    </div>
+    <button type="submit">Sign Up</button>
+    <p>@ViewBag.ErrorMessage</p>
+</form>
